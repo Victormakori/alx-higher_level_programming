@@ -1,10 +1,11 @@
-#**0x00. Python - Hello, World**
-##**Description**
+# **0x00. Python - Hello, World**
+
+## **Description**
 This is an introduction to the python programming language
 
-###**Resources**
+### **Resources**
 
--[The Python tutorial](https://intranet.alxswe.com/rltoken/JsFCs_NBzMAR7-XPAZ9BoA)
+-[The Python tutorial](https://docs.python.org/3/tutorial/index.html)
 -[Whetting Your Appetite]
 -[[Using the Python Interpreter]
 -[An Informal Introduction to Python] 
