@@ -1,9 +1,5 @@
 # Python - if/else, loops, functions
 
-![coding]("https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/233/code.png")
-
-
-
 # Objectives
 
 * Why Python programming is awesome
