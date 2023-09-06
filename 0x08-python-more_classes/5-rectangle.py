@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""Module 5-rectangle
-Defines a Rectangle class.
-"""
+"""This module defines a Rectangle class."""
 
 
 class Rectangle:
@@ -20,8 +18,10 @@ class Rectangle:
     def __str__(self):
         """Returns an informal and nicely printable string representation
         of a Rectangle instance, filled with the '#' character."""
+         # Check if the rectangle is empty
         if self.__height == 0 or self.__width == 0:
             return ''
+        # Create a string representation of the rectangle
         rec_str = ''
         for i in range(self.__height):
             for j in range(self.__width):
