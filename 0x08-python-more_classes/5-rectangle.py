@@ -18,10 +18,10 @@ class Rectangle:
     def __str__(self):
         """Returns an informal and nicely printable string representation
         of a Rectangle instance, filled with the '#' character."""
-         # Check if the rectangle is empty
+         """ Check if the rectangle is empty"""
         if self.__height == 0 or self.__width == 0:
             return ''
-        # Create a string representation of the rectangle
+        """ Create a string representation of the rectangle"""
         rec_str = ''
         for i in range(self.__height):
             for j in range(self.__width):
