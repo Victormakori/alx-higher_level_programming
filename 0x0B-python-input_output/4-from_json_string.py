@@ -6,6 +6,5 @@ import json
 
 
 def from_json_string(my_str):
-
-    string_converted = json.loads(my_str)
-    return (string_converted)
+    """ This function get string from json """
+    return json.loads(my_str)
