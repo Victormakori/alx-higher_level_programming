@@ -1,44 +1,85 @@
-# Use of 3-say_my_name.py
-
-"""
-The say_my_name prints two strings:
- first name and last name
- """
+# Usage of the say_my_name function
 # Usage:
-# import the module
+"""
+say_my_name. Exception is that first_name must be a string or last_name must be a string
+Returns a new matrix that is a copy of the parameter
+``matrix`` with all elements divided by ``div``.
+"""
+# importing matrix_divided
 
- >>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix = [
+... [6, 9, 12],
+... [15, 18, 21]
+... ] 
 
-# Handle both names input
+>>> print(matrix_divided(matrix, 3))
+[[2.0, 3.0, 4.0], [5.0, 6.0, 7.0]]
 
->>> say_my_name("Francis", "Waihiga")
-My name is Francis Waihiga
+# Rounding of the quotients
+ 
+>>> matrix = [
+... [4, 5, 6],
+... [7, 8, 9]
+... ] 
+>>> print(matrix_divided(matrix, 3))
+[[1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
 
-# Handling only first name input
+# Note the initial matrix does not change
 
->>> say_my_name("Francis")
-My name is Francis 
+>>> print(matrix)
+[[4, 5, 6], [7, 8, 9]]
 
-# Handling both string argument missing
+# Handling floating point numbers
 
->>> say_my_name()
+>>> matrix = [
+... [4.4, -5.5, 6.6],
+... [7.7, 8.8, -9.9]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.47, -1.83, 2.2], [2.57, 2.93, -3.3]]
+
+# Combinining both floats and integers
+
+>>> matrix = [
+... [3, 4, -5.5, 6.6],
+... [-7.00, 8, 9.99, 10]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 1.33, -1.83, 2.2], [-2.33, 2.67, 3.33, 3.33]]
+
+# Handling undivisible elements
+
+>>> matrix = [
+... [4, 5, 6],
+... [7, 8, 9]
+... ]
+>>> print(matrix_divided(matrix, "name"))
 Traceback (most recent call last):
-TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+TypeError: div must be a number
 
-# Handling one non strings argument input
-
->>> say_my_name(43, "Francis")
+>>> print(matrix_divided(matrix, None))
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: div must be a number
 
-# Handling secong argument non string
+# Handling cases where div is not a non zero
 
->>> say_my_name("Francis", 36)
+>>> print(matrix_divided(matrix, 0))
 Traceback (most recent call last):
-TypeError: last_name must be a string
+ZeroDivisionError: division by zero
 
-# Handling None
+# When there is an empty lists of list we print matrix_divided
 
->>> say_my_name(None)
+>>> matrix = [[]]
+>>> print(matrix_divided(matrix, 3))
+[[]]
+
+# Handling cases where one of the row is more than the other
+
+>>> matrix = [
+...    [4, 5, 6, 7],
+...    [8, 9, 10]
+... ]
+>>> print(matrix_divided(matrix, 3))
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: Each row of the matrix must have the same size
